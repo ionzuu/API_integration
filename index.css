@@ -1,0 +1,160 @@
+:root {
+    --shadow-color: 285deg 12% 20%;
+    --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.52),
+    0.5px 0.9px 1.2px -1.2px hsl(var(--shadow-color) / 0.52),
+    1.3px 2.5px 3.2px -2.5px hsl(var(--shadow-color) / 0.52);
+  --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.55),
+    1px 1.9px 2.4px -0.8px hsl(var(--shadow-color) / 0.55),
+    2.5px 5.1px 6.4px -1.7px hsl(var(--shadow-color) / 0.55),
+    6.3px 12.5px 15.7px -2.5px hsl(var(--shadow-color) / 0.55);
+  --shadow-elevation-high:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.51),
+    2.1px 4.1px 5.2px -0.4px hsl(var(--shadow-color) / 0.51),
+    4px 7.9px 10px -0.7px hsl(var(--shadow-color) / 0.51),
+    6.6px 13.2px 16.6px -1.1px hsl(var(--shadow-color) / 0.51),
+    10.6px 21.2px 26.7px -1.4px hsl(var(--shadow-color) / 0.51),
+    16.7px 33.4px 42px -1.8px hsl(var(--shadow-color) / 0.51),
+    25.4px 50.8px 63.9px -2.1px hsl(var(--shadow-color) / 0.51),
+    37.5px 75px 94.3px -2.5px hsl(var(--shadow-color) / 0.51);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+body{
+    background-color: #a86cbc;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main > form > .lab > label {
+    font-size: 1.5rem;
+    padding-left: 5px;
+    text-shadow: 9px 5px 9px #6b3e7a,
+    15px 14px 11px #6b3e7a;
+}
+
+form{
+    z-index: 4;
+}
+
+.lab{
+    padding-bottom: 25px;
+}
+
+.main > form > .infsel > select,
+.main > form > .infsel > option {
+    height: 75px;
+    width: 250px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 50px;
+    background: #a86cbc;
+    box-shadow: inset 7px 7px 9px #6b3e7a,
+                inset -7px -7px 9px #d18fe7,
+                var(--shadow-elevation-high);
+}
+
+.main > form > .infsel > button{
+    margin-left: 25px;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 50px;
+    background: #a86cbc;
+    box-shadow: inset 7px 7px 9px #6b3e7a,
+                inset -7px -7px 9px #d18fe7,
+                var(--shadow-elevation-high);
+}
+
+.hidden{
+    transition: 0.85s;
+    transition-behavior: allow-discrete;
+    transition-property: opacity, display;
+    opacity: 0;
+    display: none;
+}
+
+.main > form > .infsel > select:focus,
+.main > form > .infsel > button:focus {
+    outline: 0;
+    border: 0;
+    border-color: transparent;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    background-color: rgb(0 0 0 / 45%);
+    z-index: 2;
+}
+
+.modal{
+    position: fixed;
+    width: 50vw;
+    height: 80vh;
+    background-color: #a86cbc;
+    box-shadow: inset 7px 7px 9px #6b3e7a,
+    inset -7px -7px 9px #d18fe7,
+    var(--shadow-elevation-high),
+    2px 4px 10px black;
+    border-radius: 50px;
+    z-index: 5;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.show{
+    animation: fadein 0.85s ease-in alternate;
+    transition-behavior: allow-discrete;
+    transition-property: opacity, display;
+    opacity: 1;
+    display: flex;
+}
+
+header{
+    width: 100%;
+}
+
+.title-header{
+    margin-top: 38px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 9px 5px 9px #6b3e7a,
+    15px 14px 11px #6b3e7a;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+.modaldist{
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+    margin: 50px 50px 0 50px;
+}

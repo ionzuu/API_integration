@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Integration</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main">
+        
+        <form method="post">
+            <div class="lab">
+                <label for="location">Choose location:</label>
+            </div>
+            <div class="infsel">
+                <select name="location" id="location" required>
+                    <option value="">--- Choose an option ---</option>
+                    <option value="mx-nln">Nuevo Leon, Mexico</option>
+                    <option value="us-al-tx">Arlington, Texas</option>
+                    <option value="jp-osk">Osaka, Japan</option>
+                </select>
+                <button id="btnset" type="submit">-></button>
+            </div>
+        </form>
+
+        <div class="modal hidden">
+            <div class="modaldist">
+                <header id="header"></header>
+                <main id="main"></main>
+                <footer id="footer"></footer>
+            </div>
+        </div>
+        <div class="overlay hidden"></div>
+        <!-- 
+        Locations form:
+            - Nuevo Leon, Mexico
+            - Arlington, Texas
+            - Osaka, Japan
+            ... Maybe i'll add more 
+        -->
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
