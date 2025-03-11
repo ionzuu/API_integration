@@ -137,17 +137,93 @@ header{
 }
 
 .title-header{
-    margin-top: 38px;
     width: 100%;
     text-align: center;
     text-shadow: 9px 5px 9px #6b3e7a,
     15px 14px 11px #6b3e7a;
 }
 
+.temp > img {
+    width: 119px;
+    height: 119px;
+    filter: drop-shadow(2px 4px 6px black);
+    animation: sun 8s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.locate > img{
+    width: 119px;
+    height: 119px;
+    filter: drop-shadow(2px 4px 6px black);
+    animation: world 50s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.wind > img{
+    width: 119px;
+    height: 119px;
+    filter: drop-shadow(2px 4px 6px black);
+    animation: sun 8s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.wind{
+    display: grid;
+        width: 100%;
+        grid-area: 2 / 1 / 3 / 3;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+}
+
+@keyframes world {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    25%{
+        transform: rotateZ(180deg);
+    }
+    50%{
+        transform: rotateZ(360deg);
+    }
+    75%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes sun {
+    0%{
+        scale: 1;
+        /* transform: rotate(0deg); */
+    }
+    50%{
+        scale: 1.2;
+        /* transform: rotate(180deg); */
+    }
+    100%{
+        scale: 1;
+        /* transform: rotate(360deg); */
+    }
+}
+
 main{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 35% 35%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.temp, .locate, .wind{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.wind{
+    display: grid;
+    grid-area: 2 / 1 / 3 / 3; 
 }
 
 .modaldist{
