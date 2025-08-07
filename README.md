@@ -17,3 +17,5 @@ Modal popup for clean UI experience
 
 📸 Preview
 
+<img width="1919" height="906" alt="Image" src="https://github.com/user-attachments/assets/4078fa7f-02ca-485f-ab12-217e44bf0cc5" />
+
