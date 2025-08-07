@@ -1,4 +1,4 @@
-🌍 Weather Info App
+🌍 Weather Info App 0.5v
 This is a simple web application that shows real-time weather information (temperature, wind speed, and coordinates) for selected locations using the Open-Meteo API.
 
 🔧 Features
