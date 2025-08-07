@@ -70,7 +70,7 @@ function showInfo(getInfo, currentLocation){
     header.innerHTML = `<h1 class='title-header'>${currentLocation.name}</h1><br><h3 class='title-header'>Current Time: ${getInfo?.current.time.replace('T', ' ')}</h3>`
     main.innerHTML = `  
         <div class="temp"><img src="../API_integration/img/sunny.png"><h3 class='title-header'>Temperature: ${getInfo?.current.temperature_2m}°</h3></div>
-        <div class="locate"><img src="../API_integration//img/world.png"><h3 class='title-header'>Latitude: ${currentLocation.lat} <br> Longitude: ${currentLocation.lon}</h3></div>
+        <div class="locate"><img src="../API_integration/img/world.png"><h3 class='title-header'>Latitude: ${currentLocation.lat} <br> Longitude: ${currentLocation.lon}</h3></div>
         <div class="wind"><img src="../API_integration/img/wind.webp"><h3 class='title-header'>Wind speed: ${getInfo?.current.wind_speed_10m} mph</h3></div>
     `
 }
